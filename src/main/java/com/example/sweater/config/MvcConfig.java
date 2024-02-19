@@ -13,10 +13,7 @@ public class MvcConfig implements WebMvcConfigurer {
     @Value("${upload.path}")
     private String uploadPath;
 
-    @Bean
-    public RestTemplate getRestTemplate() {
-        return new RestTemplate();
-    }
+
 
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/login").setViewName("login");
